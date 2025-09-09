@@ -4,14 +4,14 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { createTranslator } from "next-intl";
 
-interface ResourceDetailPageProps {
+type Props = {
   params: {
-    slug: string;
     locale: string;
+    slug: string;
   };
-}
+};
 
-export default async function ResourceDetailPage({ params }: ResourceDetailPageProps) {
+export default async function ResourceDetailPage({ params }: Props) {
   const { slug, locale } = params;
 
   let messages;
@@ -39,10 +39,10 @@ export default async function ResourceDetailPage({ params }: ResourceDetailPageP
 
   return (
     <div className="container mx-auto py-12 px-6 md:px-10 bg-background">
-      <article
-        className="bg-card rounded-lg shadow-lg p-8 md:p-12 border border-border"
-      >
-        <h1 className="text-4xl font-bold text-primary mb-4 font-serif">{resource.title}</h1>
+      <article className="bg-card rounded-lg shadow-lg p-8 md:p-12 border border-border">
+        <h1 className="text-4xl font-bold text-primary mb-4 font-serif">
+          {resource.title}
+        </h1>
         <p className="text-lg mb-6">{resource.description}</p>
 
         {resource.previewImage && (
