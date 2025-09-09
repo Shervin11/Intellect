@@ -1,0 +1,136 @@
+{
+  "location": {
+    "zeboshka_address": "Zeboshka Address",
+    "zeboshka_working_hours": "Zeboshka Working Hours",
+    "avtovokzal_tajiki_address": "Tajik Bus Station Address",
+    "avtovokzal_tajiki_working_hours": "Tajik Bus Station Working Hours",
+    "33_mkr_address": "33 Microdistrict Address",
+    "33_mkr_working_hours": "33 Microdistrict Working Hours",
+    "avtovokzal_rusi_address": "Russian Bus Station Address",
+    "avtovokzal_rusi_working_hours": "Russian Bus Station Working Hours",
+    "dangara_address": "Dangara Address",
+    "dangara_working_hours": "Dangara Working Hours",
+    "zarafshon_address": "Zarafshon Address",
+    "zarafshon_working_hours": "Zarafshon Working Hours"
+  },
+  "resource": {
+    "programming_course": {
+      "title": "Programming Course",
+      "description": "Learn programming fundamentals with our online course.",
+      "full_content": "<p>Full course details and syllabus.</p>"
+    },
+    "english_club": {
+      "title": "English Club",
+      "description": "Join our local English speaking club.",
+      "full_content": "<p>Meetings every Thursday at 6pm.</p>"
+    },
+    "digital_marketing": {
+      "title": "Digital Marketing Masterclass",
+      "description": "Learn the basics of digital marketing and SEO.",
+      "full_content": "<p>Course includes practical workshops.</p>"
+    },
+    "youth_mentorship": {
+      "title": "Youth Mentorship Program",
+      "description": "Mentorship for young professionals and students.",
+      "full_content": "<p>Mentor matching and career advice sessions.</p>"
+    },
+    "math_lessons": {
+      "title": "Math Lessons",
+      "description": "Offline math lessons for high school students.",
+      "full_content": "<p>Experienced teachers and practical exercises.</p>"
+    },
+    "ai_intro": {
+      "title": "Introduction to AI",
+      "description": "Online course covering AI basics and applications.",
+      "full_content": "<p>Includes Python programming and projects.</p>"
+    },
+    "tajik_language": {
+      "title": "Tajik Language Classes",
+      "description": "Learn the Tajik language with native speakers.",
+      "full_content": "<p>Classes available both online and offline.</p>"
+    },
+    "cybersecurity": {
+      "title": "Cybersecurity Masterclass",
+      "description": "Masterclass covering security fundamentals.",
+      "full_content": "<p>Includes threat analysis and protection techniques.</p>"
+    },
+    "cta_website": "Visit Website",
+    "cta_pdf": "Download PDF",
+    "resource_not_found": "Resource Not Found",
+    "resource_not_found_message": "Please check the URL or go back."
+  },
+  "tags": {
+    "stem": "STEM",
+    "online_course": "Online Course",
+    "technology": "Technology",
+    "languages": "Languages",
+    "local_event": "Local Event",
+    "education": "Education",
+    "masterclass": "Masterclass",
+    "business": "Business",
+    "youth": "Youth",
+    "mentorship": "Mentorship",
+    "development": "Development",
+    "offline": "Offline",
+    "culture": "Culture",
+    "security": "Security"
+  },
+  "categories": {
+    "education": "Education",
+    "languages": "Languages",
+    "technology": "Technology",
+    "youth": "Youth"
+  },
+  "about": {
+    "olimjon_title": "CEO",
+    "olimjon_description": "Olimjon is the CEO with 10 years of experience.",
+    "shahbozi_title": "Doctor",
+    "shahbozi_description": "Shahbozi is a medical expert and mentor."
+  },
+  "teacher": {
+    "ahmad_saidov_subject": "Mathematics",
+    "ahmad_saidov_description": "Ahmad specializes in algebra and calculus.",
+    "malika_karimova_subject": "English Language",
+    "malika_karimova_description": "Malika teaches English and literature.",
+    "farhod_ismoilov_subject": "Physics",
+    "farhod_ismoilov_description": "Farhod focuses on theoretical and applied physics.",
+    "zuhra_rahimova_subject": "Computer Science",
+    "zuhra_rahimova_description": "Zuhra teaches programming and algorithms."
+  },
+  "contact": {
+    "resource_not_found": "Resource Not Found",
+    "resource_not_found_message": "The requested resource does not exist."
+  },
+  "header": {
+    "courses": "Courses",
+    "about": "About",
+    "contacts": "Contacts",
+    "language": "Language",
+    "toggle_theme": "Toggle theme",
+    "theme_light": "Light",
+    "theme_dark": "Dark"
+  },
+  "footer": {
+    "title": "Intellect",
+    "description": "Empowering minds through quality education and innovative learning experiences.",
+    "copyright": "© 2025 Intellect. All rights reserved.",
+    "quick_links": "Quick Links",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "courses": "Courses",
+      "contacts": "Contacts"
+    },
+    "contact_info": "Contact Info",
+    "email": "intellect.edu@gmail.com",
+    "phone": "+992 (554) 16-16-16",
+    "follow_us": "Follow Us",
+    "stay_connected": "Stay connected for updates and educational content."
+  },
+  "catalog": {
+    "title": "Courses",
+    "search_placeholder": "Search courses...",
+    "official": "Official",
+    "verified": "Verified"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "location": {
+    "zeboshka_address": "Адрес Зебошка",
+    "zeboshka_working_hours": "Часы работы Зебошка",
+    "avtovokzal_tajiki_address": "Адрес Таджикского автовокзала",
+    "avtovokzal_tajiki_working_hours": "Часы работы Таджикского автовокзала",
+    "33_mkr_address": "Адрес 33 микрорайона",
+    "33_mkr_working_hours": "Часы работы 33 микрорайона",
+    "avtovokzal_rusi_address": "Адрес Русского автовокзала",
+    "avtovokzal_rusi_working_hours": "Часы работы Русского автовокзала",
+    "dangara_address": "Адрес Дангарa",
+    "dangara_working_hours": "Часы работы Дангарa",
+    "zarafshon_address": "Адрес Зарафшона",
+    "zarafshon_working_hours": "Часы работы Зарафшона"
+  },
+  "resource": {
+    "programming_course": {
+      "title": "Курс программирования",
+      "description": "Изучайте основы программирования с нашим онлайн-курсом.",
+      "full_content": "<p>Полное описание курса и программа.</p>"
+    },
+    "english_club": {
+      "title": "Английский клуб",
+      "description": "Присоединяйтесь к нашему локальному английскому клубу.",
+      "full_content": "<p>Встречи проходят каждый четверг в 18:00.</p>"
+    },
+    "digital_marketing": {
+      "title": "Мастер-класс по цифровому маркетингу",
+      "description": "Изучите основы цифрового маркетинга и SEO.",
+      "full_content": "<p>Курс включает практические мастер-классы.</p>"
+    },
+    "youth_mentorship": {
+      "title": "Программа наставничества для молодежи",
+      "description": "Наставничество для молодых профессионалов и студентов.",
+      "full_content": "<p>Подбор наставников и консультации по карьере.</p>"
+    },
+    "math_lessons": {
+      "title": "Уроки математики",
+      "description": "Очные уроки математики для старшеклассников.",
+      "full_content": "<p>Опытные преподаватели и практические задания.</p>"
+    },
+    "ai_intro": {
+      "title": "Введение в искусственный интеллект",
+      "description": "Онлайн-курс по основам ИИ и его применению.",
+      "full_content": "<p>Включает программирование на Python и проекты.</p>"
+    },
+    "tajik_language": {
+      "title": "Курсы таджикского языка",
+      "description": "Изучайте таджикский язык с носителями.",
+      "full_content": "<p>Занятия доступны онлайн и офлайн.</p>"
+    },
+    "cybersecurity": {
+      "title": "Мастер-класс по кибербезопасности",
+      "description": "Мастер-класс по основам безопасности.",
+      "full_content": "<p>Включает анализ угроз и техники защиты.</p>"
+    },
+    "cta_website": "Перейти на сайт",
+    "cta_pdf": "Скачать PDF",
+    "resource_not_found": "Ресурс не найден",
+    "resource_not_found_message": "Пожалуйста, проверьте URL или вернитесь назад."
+  },
+  "tags": {
+    "stem": "STEM",
+    "online_course": "Онлайн курс",
+    "technology": "Технологии",
+    "languages": "Языки",
+    "local_event": "Местное событие",
+    "education": "Образование",
+    "masterclass": "Мастер-класс",
+    "business": "Бизнес",
+    "youth": "Молодежь",
+    "mentorship": "Наставничество",
+    "development": "Развитие",
+    "offline": "Оффлайн",
+    "culture": "Культура",
+    "security": "Безопасность"
+  },
+  "categories": {
+    "education": "Образование",
+    "languages": "Языки",
+    "technology": "Технологии",
+    "youth": "Молодежь"
+  },
+  "about": {
+    "olimjon_title": "Генеральный директор",
+    "olimjon_description": "Олимджон — генеральный директор с 10-летним опытом.",
+    "shahbozi_title": "Доктор",
+    "shahbozi_description": "Шахбози — медицинский эксперт и наставник."
+  },
+  "teacher": {
+    "ahmad_saidov_subject": "Математика",
+    "ahmad_saidov_description": "Ахмад специализируется на алгебре и вычислительной математике.",
+    "malika_karimova_subject": "Английский язык",
+    "malika_karimova_description": "Малика преподает английский язык и литературу.",
+    "farhod_ismoilov_subject": "Физика",
+    "farhod_ismoilov_description": "Фарход занимается теоретической и прикладной физикой.",
+    "zuhra_rahimova_subject": "Информатика",
+    "zuhra_rahimova_description": "Зухра преподает программирование и алгоритмы."
+  },
+  "contact": {
+    "resource_not_found": "Ресурс не найден",
+    "resource_not_found_message": "Запрошенный ресурс не существует."
+  },
+  "header": {
+    "courses": "Курсы",
+    "about": "О нас",
+    "contacts": "Контакты",
+    "language": "Язык",
+    "toggle_theme": "Переключить тему",
+    "theme_light": "Светлая",
+    "theme_dark": "Темная"
+  },
+  "footer": {
+    "title": "Интеллект",
+    "description": "Расширяем горизонты знаний через качественное образование и инновационные методы обучения.",
+    "copyright": "© 2025 Интеллект. Все права защищены.",
+    "quick_links": "Быстрые ссылки",
+    "links": {
+      "home": "Главная",
+      "about": "О нас",
+      "courses": "Курсы",
+      "contacts": "Контакты"
+    },
+    "contact_info": "Контактная информация",
+    "email": "intellect.edu@gmail.com",
+    "phone": "+992 (554) 16-16-16",
+    "follow_us": "Следите за нами",
+    "stay_connected": "Оставайтесь на связи для получения обновлений и образовательного контента."
+  },
+  "catalog": {
+    "title": "Курсы",
+    "search_placeholder": "Поиск курсов..."
+  }
+}

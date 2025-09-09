@@ -1,0 +1,134 @@
+{
+  "location": {
+    "zeboshka_address": "Нишонии Зебошка",
+    "zeboshka_working_hours": "Соатҳои кории Зебошка",
+    "avtovokzal_tajiki_address": "Нишонии Автовокзали Тоҷикӣ",
+    "avtovokzal_tajiki_working_hours": "Соатҳои кории Автовокзали Тоҷикӣ",
+    "33_mkr_address": "Нишонии 33 микроноҳия",
+    "33_mkr_working_hours": "Соатҳои кории 33 микроноҳия",
+    "avtovokzal_rusi_address": "Нишонии Автовокзали Русӣ",
+    "avtovokzal_rusi_working_hours": "Соатҳои кории Автовокзали Русӣ",
+    "dangara_address": "Нишонии Данғара",
+    "dangara_working_hours": "Соатҳои кории Данғара",
+    "zarafshon_address": "Нишонии Зарафшон",
+    "zarafshon_working_hours": "Соатҳои кории Зарафшон"
+  },
+  "resource": {
+    "programming_course": {
+      "title": "Курси барномасозӣ",
+      "description": "Асосҳои барномасозиро бо курси онлайн омӯзед.",
+      "full_content": "<p>Тафсилоти пурраи курс ва барномаи таълимӣ.</p>"
+    },
+    "english_club": {
+      "title": "Клуби англисӣ",
+      "description": "Ба клуби маҳалии суханронии англисӣ шомил шавед.",
+      "full_content": "<p>Ҷаласаҳо ҳар панҷшанбе соати 18:00 баргузор мешаванд.</p>"
+    },
+    "digital_marketing": {
+      "title": "Мастер-класси маркетинги рақамӣ",
+      "description": "Асосҳои маркетинги рақамӣ ва SEO-ро омӯзед.",
+      "full_content": "<p>Курс бо коргоҳҳои амалӣ ҳамроҳ аст.</p>"
+    },
+    "youth_mentorship": {
+      "title": "Барномаи роҳнамоии ҷавонон",
+      "description": "Роҳнамоӣ барои мутахассисони ҷавон ва донишҷӯён.",
+      "full_content": "<p>Муҳосибаи роҳнамо ва машваратҳои касбӣ.</p>"
+    },
+    "math_lessons": {
+      "title": "Дарсҳои математика",
+      "description": "Дарсҳои офлайн барои донишҷӯёни мактабҳои миёна.",
+      "full_content": "<p>Омӯзгорони боихтисос ва машқҳои амалӣ.</p>"
+    },
+    "ai_intro": {
+      "title": "Муқаддима ба AI",
+      "description": "Курси онлайн оид ба асосҳои AI ва истифодаҳои он.",
+      "full_content": "<p>Барномаи Python ва лоиҳаҳоро дар бар мегирад.</p>"
+    },
+    "tajik_language": {
+      "title": "Синфҳои забони тоҷикӣ",
+      "description": "Забони тоҷикӣ бо забонварони бумӣ омӯзед.",
+      "full_content": "<p>Дарсҳо ҳам онлайн ва ҳам офлайн дастрасанд.</p>"
+    },
+    "cybersecurity": {
+      "title": "Мастер-класси амнияти киберӣ",
+      "description": "Мастер-класс оид ба асосҳои амният.",
+      "full_content": "<p>Таҳлили таҳдидҳо ва техникаҳои муҳофизатро дар бар мегирад.</p>"
+    },
+    "cta_website": "Вебсайтро боздид кунед",
+    "cta_pdf": "PDF-ро зеркашӣ кунед",
+    "resource_not_found": "Манбаи маълумот пайдо нашуд",
+    "resource_not_found_message": "Лутфан URL-ро санҷед ё баргардед."
+  },
+  "tags": {
+    "stem": "STEM",
+    "online_course": "Курси онлайн",
+    "technology": "Технология",
+    "languages": "Забонҳо",
+    "local_event": "Рӯйдоди маҳаллӣ",
+    "education": "Таълим",
+    "masterclass": "Мастер-класс",
+    "business": "Бизнес",
+    "youth": "Ҷавонон",
+    "mentorship": "Роҳнамоӣ",
+    "development": "Рушд",
+    "offline": "Офлайн",
+    "culture": "Фарҳанг",
+    "security": "Амният"
+  },
+  "categories": {
+    "education": "Таълим",
+    "languages": "Забонҳо",
+    "technology": "Технология",
+    "youth": "Ҷавонон"
+  },
+  "about": {
+    "olimjon_title": "Директор",
+    "olimjon_description": "Олимҷон бо таҷрибаи 10-сола директор аст.",
+    "shahbozi_title": "Доктор",
+    "shahbozi_description": "Шаҳбозӣ мутахассиси тиббӣ ва роҳнамост."
+  },
+  "teacher": {
+    "ahmad_saidov_subject": "Математика",
+    "ahmad_saidov_description": "Ахмад дар алгебра ва ҳисоббарории амалӣ мутахассис аст.",
+    "malika_karimova_subject": "Забони англисӣ",
+    "malika_karimova_description": "Малика забони англисӣ ва адабиётро меомӯзонад.",
+    "farhod_ismoilov_subject": "Физика",
+    "farhod_ismoilov_description": "Фарҳод ба физикаи назариявӣ ва амалӣ диққат медиҳад.",
+    "zuhra_rahimova_subject": "Компютершиносӣ",
+    "zuhra_rahimova_description": "Зухра барномасозӣ ва алгоритмҳоро меомӯзонад."
+  },
+  "contact": {
+    "resource_not_found": "Манбаъ пайдо нашуд",
+    "resource_not_found_message": "Манбаи дархостшуда вуҷуд надорад."
+  },
+  "header": {
+    "courses": "Курсҳо",
+    "about": "Дар бораи мо",
+    "contacts": "Тамосҳо",
+    "language": "Забон",
+    "toggle_theme": "Гузариш байни мавзӯъҳо",
+    "theme_light": "Равшан",
+    "theme_dark": "Тарик"
+  },
+  "footer": {
+    "title": "Интеллект",
+    "description": "Рушди ақл тавассути таълими босифат ва таҷрибаҳои навоваронаи омӯзиш.",
+    "copyright": "© 2025 Интеллект. Ҳуқуқҳо ҳифз шудаанд.",
+    "quick_links": "Ссилаи зуд",
+    "links": {
+      "home": "Саҳифаи асосӣ",
+      "about": "Дар бораи мо",
+      "courses": "Курсҳо",
+      "contacts": "Тамосҳо"
+    },
+    "contact_info": "Маълумоти тамос",
+    "email": "intellect.edu@gmail.com",
+    "phone": "+992 (554) 16-16-16",
+    "follow_us": "Моро пайгирӣ кунед",
+    "stay_connected": "Барои навсозиҳо ва мундариҷаи таълимӣ бо мо ҳамроҳ шавед."
+  },
+  "catalog": {
+    "title": "Курсҳо",
+    "search_placeholder": "Ҷустуҷӯи курсҳо..."
+  }
+}
