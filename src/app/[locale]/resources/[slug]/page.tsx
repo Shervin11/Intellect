@@ -1,30 +1,32 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { notFound } from "next/navigation";
 import { getResourceBySlug } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { createTranslator } from "next-intl";
 
 interface ResourceDetailPageProps {
   params: {
     slug: string;
+    locale: string;
   };
 }
 
-export default function ResourceDetailPage({ params }: ResourceDetailPageProps) {
-  const { slug } = params;
-  const t = useTranslations();
+export default async function ResourceDetailPage({ params }: ResourceDetailPageProps) {
+  const { slug, locale } = params;
+
+  let messages;
+  try {
+    messages = (await import(`../../../../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
+  const t = createTranslator({ locale, messages });
 
   const rawResource = getResourceBySlug(slug);
 
   if (!rawResource) {
-    return (
-      <div className="container mx-auto py-12 px-6 md:px-10 text-center text-foreground">
-        <h1 className="text-4xl font-bold text-primary font-serif">{t("contact.resource_not_found")}</h1>
-        <p className="mt-4 text-lg">{t("contact.resource_not_found_message")}</p>
-      </div>
-    );
+    notFound();
   }
 
   const resource = {
@@ -37,10 +39,7 @@ export default function ResourceDetailPage({ params }: ResourceDetailPageProps) 
 
   return (
     <div className="container mx-auto py-12 px-6 md:px-10 bg-background">
-      <motion.article
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+      <article
         className="bg-card rounded-lg shadow-lg p-8 md:p-12 border border-border"
       >
         <h1 className="text-4xl font-bold text-primary mb-4 font-serif">{resource.title}</h1>
@@ -69,7 +68,7 @@ export default function ResourceDetailPage({ params }: ResourceDetailPageProps) 
           className="prose prose-lg max-w-none text-foreground leading-relaxed"
           dangerouslySetInnerHTML={{ __html: resource.fullContent }}
         />
-      </motion.article>
+      </article>
     </div>
   );
 }

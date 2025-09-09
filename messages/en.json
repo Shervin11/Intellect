@@ -17,42 +17,42 @@
     "programming_course": {
       "title": "Programming Course",
       "description": "Learn programming fundamentals with our online course.",
-      "full_content": "<p>Full course details and syllabus.</p>"
+      "full_content": "Full course details and syllabus."
     },
     "english_club": {
       "title": "English Club",
       "description": "Join our local English speaking club.",
-      "full_content": "<p>Meetings every Thursday at 6pm.</p>"
+      "full_content": "Meetings every Thursday at 6pm."
     },
     "digital_marketing": {
       "title": "Digital Marketing Masterclass",
       "description": "Learn the basics of digital marketing and SEO.",
-      "full_content": "<p>Course includes practical workshops.</p>"
+      "full_content": "Course includes practical workshops."
     },
     "youth_mentorship": {
       "title": "Youth Mentorship Program",
       "description": "Mentorship for young professionals and students.",
-      "full_content": "<p>Mentor matching and career advice sessions.</p>"
+      "full_content": "Mentor matching and career advice sessions."
     },
     "math_lessons": {
       "title": "Math Lessons",
       "description": "Offline math lessons for high school students.",
-      "full_content": "<p>Experienced teachers and practical exercises.</p>"
+      "full_content": "Experienced teachers and practical exercises."
     },
     "ai_intro": {
       "title": "Introduction to AI",
       "description": "Online course covering AI basics and applications.",
-      "full_content": "<p>Includes Python programming and projects.</p>"
+      "full_content": "Includes Python programming and projects."
     },
     "tajik_language": {
       "title": "Tajik Language Classes",
       "description": "Learn the Tajik language with native speakers.",
-      "full_content": "<p>Classes available both online and offline.</p>"
+      "full_content": "Classes available both online and offline."
     },
     "cybersecurity": {
       "title": "Cybersecurity Masterclass",
       "description": "Masterclass covering security fundamentals.",
-      "full_content": "<p>Includes threat analysis and protection techniques.</p>"
+      "full_content": "Includes threat analysis and protection techniques."
     },
     "cta_website": "Visit Website",
     "cta_pdf": "Download PDF",
