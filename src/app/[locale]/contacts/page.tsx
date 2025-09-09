@@ -22,9 +22,30 @@ const containerVariants = {
   },
 };
 
+type Location = {
+  id: number;
+  name: string;
+  address: string;
+  addressKey: string;
+  phone: string;
+  email: string;
+  workingHours: string;
+  workingHoursKey: string;
+  bgColorClass: string;
+  darkBgColorClass: string;
+  darkIconColorClass: string;
+  iconColorClass: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+};
+
 export default function Contacts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
+    null
+  );
   const t = useTranslations();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -39,7 +60,7 @@ export default function Contacts() {
     workingHours: t(loc.workingHoursKey),
   }));
 
-  const openLocationModal = (location: any) => {
+  const openLocationModal = (location: Location) => {
     setSelectedLocation(location);
     setIsModalOpen(true);
   };
@@ -55,7 +76,7 @@ export default function Contacts() {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50"
         style={{ scaleX }}
       />
-      
+
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
