@@ -7,20 +7,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 import "./styles/styles.css";
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  useScroll,
-  useSpring,
-  AnimatePresence,
-} from "motion/react";
+import { motion, useScroll, useSpring, AnimatePresence } from "motion/react";
+import Image from "next/image";
+import hero1 from "@/assets/intellect.webp";
 
 import { EffectCards, Pagination } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 
 export default function Home() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations();
   const [text, setText] = React.useState("Overview");
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -74,7 +69,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="my-[50px]"
+        className="my-[50px] max-w-[1300px] m-auto"
       >
         <Swiper
           spaceBetween={30}
@@ -183,7 +178,7 @@ export default function Home() {
       </motion.div>
 
       <motion.section
-        className="my-10 bg-card dark:bg-card relative overflow-hidden rounded-3xl bg-gradient-to-br from-background to-muted border border-border p-4 sm:p-8 md:p-12 shadow-xl"
+        className="my-10 max-w-[1300px] m-auto bg-card dark:bg-card relative overflow-hidden rounded-3xl bg-gradient-to-br from-background to-muted border border-border p-4 sm:p-8 md:p-12 shadow-xl"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -277,20 +272,10 @@ export default function Home() {
               className="swiper-card"
             >
               <SwiperSlide>
-                <motion.div
-                  className="h-full w-[140px] bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-white text-xl font-bold"
-                  whileHover={{ rotateY: 10 }}
-                >
-                  Slide 1
-                </motion.div>
+                <Image src={hero1} alt="hero1" />
               </SwiperSlide>
               <SwiperSlide>
-                <motion.div
-                  className="h-full w-[140px] bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold"
-                  whileHover={{ rotateY: 10 }}
-                >
-                  Slide 2
-                </motion.div>
+                <Image src={hero1} alt="hero1" />
               </SwiperSlide>
             </Swiper>
           </motion.div>
@@ -298,7 +283,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="grid gap-6 md:grid-cols-2 md:gap-8 my-[100px]"
+        className="grid max-w-[1300px] m-auto gap-6 md:grid-cols-2 md:gap-8 my-[100px]"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -386,7 +371,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="rounded-3xl my-[50px] p-6 sm:p-8 md:p-10 bg-card dark:bg-card border border-border shadow-xl overflow-hidden"
+        className="rounded-3xl my-[50px] max-w-[1300px] m-auto p-6 sm:p-8 md:p-10 bg-card dark:bg-card border border-border shadow-xl overflow-hidden"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

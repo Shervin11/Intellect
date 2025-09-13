@@ -99,7 +99,15 @@
   },
   "contact": {
     "resource_not_found": "Resource Not Found",
-    "resource_not_found_message": "The requested resource does not exist."
+    "resource_not_found_message": "The requested resource does not exist.",
+    "title": "Contacts",
+    "subtitle": "Contact us for more information or to schedule a meeting.",
+    "click_for_details": "Click for details",
+    "working_hours": "Working Hours",
+    "branch_details": "Branch Details",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
   },
   "header": {
     "courses": "Courses",

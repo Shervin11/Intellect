@@ -41,7 +41,7 @@ export default function LocaleLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main className="max-w-[1300px] m-auto">{children}</main>
+            <main>{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

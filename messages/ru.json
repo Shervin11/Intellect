@@ -99,7 +99,15 @@
   },
   "contact": {
     "resource_not_found": "Ресурс не найден",
-    "resource_not_found_message": "Запрошенный ресурс не существует."
+    "resource_not_found_message": "Запрошенный ресурс не существует.",
+    "title": "Контакты",
+    "subtitle": "Свяжитесь с нами для получения дополнительной информации или для запланирования встречи.",
+    "click_for_details": "Нажмите для деталей",
+    "working_hours": "Рабочие часы",
+    "branch_details": "Детали ветки",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "email": "Электронная почта"
   },
   "header": {
     "courses": "Курсы",

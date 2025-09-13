@@ -99,7 +99,15 @@
   },
   "contact": {
     "resource_not_found": "Манбаъ пайдо нашуд",
-    "resource_not_found_message": "Манбаи дархостшуда вуҷуд надорад."
+    "resource_not_found_message": "Манбаи дархостшуда вуҷуд надорад.",
+    "title": "Тамосҳо",
+    "subtitle": "Тамос бораи мо дар бораи мо дар бораи мо дар бораи мо",
+    "click_for_details": "Пахш кунед барои маълумот",
+    "working_hours": "Соатҳои кор",
+    "branch_details": "Дархостшуда вуҷуд",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "email": "Почта"
   },
   "header": {
     "courses": "Курсҳо",
