@@ -41,7 +41,7 @@ export default function LocaleLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main>{children}</main>
+            <main className="dark:bg-slate-900">{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

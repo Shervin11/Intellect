@@ -1,30 +1,30 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { motion, useScroll, useSpring } from "framer-motion"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { SearchIcon, CheckCircleIcon, BookOpen, Star, Zap } from "lucide-react"
-import Link from "next/link"
-import { useTranslations } from "next-intl"
-import { resources as rawResources } from "@/lib/data"
+import { useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { SearchIcon, CheckCircleIcon, BookOpen, Star, Zap } from "lucide-react";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { resources as rawResources } from "@/lib/data";
 
 interface Resource {
-  id: string | number
-  href: string
-  title: string
-  description: string
-  tags: string[]
-  isOfficial?: boolean
-  isVerified?: boolean
+  id: string | number;
+  href: string;
+  title: string;
+  description: string;
+  tags: string[];
+  isOfficial?: boolean;
+  isVerified?: boolean;
 }
 
 interface ResourceCardProps {
-  resource: Resource
-  t: (key: string) => string
+  resource: Resource;
+  t: (key: string) => string;
 }
 
 const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
@@ -34,7 +34,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="group relative bg-card dark:bg-card rounded-2xl p-6 border border-border flex flex-col h-full cursor-pointer overflow-hidden shadow-xl transition-all duration-300"
+        className="group relative bg-card dark:bg-slate-800 rounded-2xl p-6 border border-border flex flex-col h-full cursor-pointer overflow-hidden shadow-xl transition-all duration-300"
         whileHover={{
           y: -8,
           scale: 1.02,
@@ -51,7 +51,9 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
           <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
             {resource.title}
           </h3>
-          <p className="text-muted-foreground text-sm mb-4 flex-grow leading-relaxed">{resource.description}</p>
+          <p className="text-muted-foreground text-sm mb-4 flex-grow leading-relaxed">
+            {resource.description}
+          </p>
           <div className="flex flex-wrap gap-2 mb-4">
             {resource.tags.map((tag, index) => (
               <Badge
@@ -65,61 +67,71 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
           <div className="flex items-center space-x-3 text-sm">
             {resource.isOfficial && (
               <span className="flex items-center text-blue-600 dark:text-blue-400 font-medium">
-                <Star className="w-4 h-4 mr-1 fill-current" /> {t("catalog.official")}
+                <Star className="w-4 h-4 mr-1 fill-current" />{" "}
+                {t("catalog.official")}
               </span>
             )}
             {resource.isVerified && (
               <span className="flex items-center text-green-600 dark:text-green-400 font-medium">
-                <CheckCircleIcon className="w-4 h-4 mr-1 fill-current" /> {t("catalog.verified")}
+                <CheckCircleIcon className="w-4 h-4 mr-1 fill-current" />{" "}
+                {t("catalog.verified")}
               </span>
             )}
           </div>
         </div>
       </motion.div>
     </Link>
-  )
-}
+  );
+};
 
 export default function Courses() {
-  const t = useTranslations()
-  const [searchTerm, setSearchTerm] = useState<string>("")
-  const [filters, setFilters] = useState<string[]>([])
-  const { scrollYProgress } = useScroll()
+  const t = useTranslations();
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [filters, setFilters] = useState<string[]>([]);
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  })
+  });
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value)
-  }
+    setSearchTerm(e.target.value);
+  };
 
   const handleFilterToggle = (tag: string) => {
-    setFilters((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
-  }
+    setFilters((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
 
   const translatedResources = rawResources.map((res) => ({
     ...res,
     title: t(res.titleKey),
     description: t(res.descriptionKey),
     tags: res.tagsKeys.map((tagKey: string) => t(tagKey)),
-  }))
+  }));
 
   const filteredResources = translatedResources.filter((resource) => {
     const matchesSearch =
       resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesFilters = filters.length === 0 || filters.every((filter) => resource.tags.includes(filter))
-    return matchesSearch && matchesFilters
-  })
+      resource.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilters =
+      filters.length === 0 ||
+      filters.every((filter) => resource.tags.includes(filter));
+    return matchesSearch && matchesFilters;
+  });
 
-  const allTags = [...new Set(translatedResources.flatMap((r) => r.tags))]
+  const allTags = [...new Set(translatedResources.flatMap((r) => r.tags))];
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background to-muted" />
+    <div className="relative overflow-hidden dark:bg-slate-900">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50"
+          style={{ scaleX }}
+        />
+
         <motion.div
           animate={{
             y: [0, -10, 0],
@@ -178,7 +190,7 @@ export default function Courses() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-12 bg-card dark:bg-card rounded-2xl p-6 border border-border shadow-xl"
+          className="mb-12 bg-card dark:bg-slate-800 rounded-2xl p-6 border border-border shadow-xl"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center">
             <div className="relative w-full lg:w-1/2">
@@ -234,12 +246,14 @@ export default function Courses() {
             >
               <div className="bg-card dark:bg-card rounded-2xl p-8 border border-border shadow-xl max-w-md mx-auto">
                 <BookOpen className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground text-lg">{t("catalog.no_resources_found")}</p>
+                <p className="text-muted-foreground text-lg">
+                  {t("catalog.no_resources_found")}
+                </p>
               </div>
             </motion.div>
           )}
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

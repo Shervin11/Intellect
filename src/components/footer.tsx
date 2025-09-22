@@ -6,7 +6,7 @@ const Footer = () => {
   const t = useTranslations("footer")
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background dark:bg-slate-900 border-t border-border">
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <motion.div

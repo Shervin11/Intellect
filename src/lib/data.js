@@ -1,3 +1,12 @@
+import hero1 from "@/assets/speaker_01.jpg";
+import hero2 from "@/assets/speaker_02.jpg";
+import hero3 from "@/assets/speaker_03.jpg";
+import hero4 from "@/assets/speaker_04.jpg";
+import teacher1 from '@/assets/david.jpeg';
+import teacher2 from '@/assets/millar.jpeg';
+import teacher3 from '@/assets/watsan.jpeg';
+import teacher4 from '@/assets/jones.jpeg';
+
 export const intellectLocations = [
   {
     id: 1,
@@ -77,7 +86,7 @@ export const intellectLocations = [
     iconColorClass: "card-blue-new-dark",
     darkIconColorClass: "card-blue-new",
   },
-]
+];
 
 export const resources = [
   {
@@ -89,7 +98,8 @@ export const resources = [
     isOfficial: true,
     isVerified: true,
     href: "/resources/programming-course",
-    previewImage: "https://images.unsplash.com/photo-1581090700227-1e8e00839f4c",
+    previewImage:
+      "https://images.unsplash.com/photo-1581090700227-1e8e00839f4c",
     ctaWebsite: "https://example.com/programming-course",
     ctaPdf: "/sample-syllabus.pdf",
   },
@@ -102,7 +112,8 @@ export const resources = [
     isOfficial: false,
     isVerified: true,
     href: "/resources/english-club",
-    previewImage: "https://images.unsplash.com/photo-1577896851231-70ef18881754",
+    previewImage:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754",
     ctaWebsite: "https://example.com/english-club",
     ctaPdf: null,
   },
@@ -115,7 +126,8 @@ export const resources = [
     isOfficial: true,
     isVerified: true,
     href: "/resources/digital-marketing",
-    previewImage: "https://images.unsplash.com/photo-1581092334573-df46c1d3f3d0",
+    previewImage:
+      "https://images.unsplash.com/photo-1581092334573-df46c1d3f3d0",
     ctaWebsite: "https://example.com/digital-marketing",
     ctaPdf: null,
   },
@@ -154,7 +166,8 @@ export const resources = [
     isOfficial: true,
     isVerified: true,
     href: "/resources/ai-intro",
-    previewImage: "https://images.unsplash.com/photo-1581090700227-1e8e00839f4c",
+    previewImage:
+      "https://images.unsplash.com/photo-1581090700227-1e8e00839f4c",
     ctaWebsite: "https://example.com/ai-intro",
     ctaPdf: null,
   },
@@ -167,7 +180,8 @@ export const resources = [
     isOfficial: true,
     isVerified: true,
     href: "/resources/tajik-language",
-    previewImage: "https://images.unsplash.com/photo-1610484826952-e4e83d3c90fe",
+    previewImage:
+      "https://images.unsplash.com/photo-1610484826952-e4e83d3c90fe",
     ctaWebsite: "https://example.com/tajik-language",
     ctaPdf: null,
   },
@@ -180,24 +194,126 @@ export const resources = [
     isOfficial: true,
     isVerified: true,
     href: "/resources/cybersecurity",
-    previewImage: "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+    previewImage:
+      "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
     ctaWebsite: "https://example.com/cybersecurity",
     ctaPdf: null,
   },
 ];
 
-
 export const categories = [
-  { nameKey: "categories.education", icon: "BookOpenIcon", href: "/catalog?category=education" },
-  { nameKey: "categories.languages", icon: "LanguagesIcon", href: "/catalog?category=languages" },
-  { nameKey: "categories.technology", icon: "LaptopIcon", href: "/catalog?category=technology" },
-  { nameKey: "categories.youth", icon: "UsersIcon", href: "/catalog?category=youth" },
-]
+  {
+    nameKey: "categories.education",
+    icon: "BookOpenIcon",
+    href: "/catalog?category=education",
+  },
+  {
+    nameKey: "categories.languages",
+    icon: "LanguagesIcon",
+    href: "/catalog?category=languages",
+  },
+  {
+    nameKey: "categories.technology",
+    icon: "LaptopIcon",
+    href: "/catalog?category=technology",
+  },
+  {
+    nameKey: "categories.youth",
+    icon: "UsersIcon",
+    href: "/catalog?category=youth",
+  },
+];
 
 export const textVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
+};
+
+export const reviews = [
+  {
+    name: "Азиза Рахимова",
+    role: "Студентка, 11 класс",
+    rating: 5,
+    text: "Благодаря вашим занятиям по биологии и химии я заняла 2-е место на республиканской олимпиаде! Преподаватели объясняют сложные темы просто и понятно.",
+    avatar: hero2,
+    id: 1,
+  },
+  {
+    name: "Дилшод Каримов",
+    role: "Родитель",
+    rating: 5,
+    text: "Сын поступил в медицинский на 5-й кластер с 187 баллами! Особенно благодарны за подготовку по анатомии и физиологии — это было самым сложным.",
+    avatar: hero1,
+    id: 2,
+  },
+  {
+    name: "София Ван",
+    role: "Студентка, готовилась к IELTS",
+    rating: 5,
+    text: "Сдала IELTS на 7.5! Преподаватель не просто учил язык, а адаптировал занятия под мои слабые места. Очень рекомендую для поступления за границу.",
+    avatar: hero4,
+    id: 3,
+  },
+  {
+    name: "Мирзахид Абдуллаев",
+    role: "Студент, 4-й кластер",
+    rating: 4,
+    text: "Поступил на IT-направление с 172 баллами. Особенно помогли курсы по математике и физике — объясняли даже самые сложные задачи.",
+    avatar: hero3,
+    id: 4,
+  },
+  {
+    name: "Нигина Турсунова",
+    role: "Студентка, биохимия",
+    rating: 5,
+    text: "Курс по биохимии спас меня на первом курсе меда! Теперь я понимаю, что такое метаболизм, ферменты и ДНК. Спасибо за доступный подход!",
+    avatar: hero2,
+    id: 5,
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Take Your Career Next Leveley Future Approach",
+    category: "data-science",
+    categoryLabel: "Data Science",
+    image: hero1,
+    date: "August 10, 2023",
+    author: "Admin",
+    excerpt: "Пошаговый план подготовки: от диагностики до финального теста. Реальные кейсы наших студентов.",
+  },
+  {
+    id: 2,
+    title: "Take Your Career Next Leveley Future Approach",
+    category: "art-design",
+    categoryLabel: "Art & Design",
+    image: hero1,
+    date: "June 21, 2023",
+    author: "Admin",
+    excerpt: "Разбор типичных задач, лайфхаки от жюри, расписание занятий. Начните готовиться уже сейчас!",
+  },
+  {
+    id: 3,
+    title: "Take Your Career Next Leveley Future Approach",
+    category: "business",
+    categoryLabel: "Business",
+    image: hero1,
+    date: "June 21, 2023",
+    author: "Admin",
+    excerpt: "История Софии: как она подняла балл с 5.5 до 7.5. Программа, материалы, график занятий.",
+  },
+  {
+    id: 4,
+    title: "Take Your Career Next Leveley Future Approach",
+    category: "data-science",
+    categoryLabel: "Data Science",
+    image: hero1,
+    date: "June 21, 2023",
+    author: "Admin",
+    excerpt: "Самые важные темы, которые нужно знать. Как учить термины и не сойти с ума. Карта мышц и костей.",
+  },
+];
 
 export const teamMembers = [
   {
@@ -214,39 +330,43 @@ export const teamMembers = [
     image: "/placeholder.svg?height=150&width=150",
     descriptionKey: "about.shahbozi_description",
   },
-]
+];
 
 export const teachers = [
   {
     id: 1,
     name: "Ахмад Саидов",
-    subjectKey: "teacher.ahmad_saidov_subject",
-    image: "/images/teacher-placeholder-1.png",
-    descriptionKey: "teacher.ahmad_saidov_description",
+    subject: "Математика, 4-5 кластер",
+    image: teacher1,
+    courses: 3,
+    students: 150,
   },
   {
     id: 2,
     name: "Малика Каримова",
-    subjectKey: "teacher.malika_karimova_subject",
-    image: "/images/teacher-placeholder-2.png",
-    descriptionKey: "teacher.malika_karimova_description",
+    subject: "Биология, олимпиады",
+    image: teacher2,
+    courses: 2,
+    students: 80,
   },
   {
     id: 3,
     name: "Фарход Исмоилов",
-    subjectKey: "teacher.farhod_ismoilov_subject",
-    image: "/images/teacher-placeholder-3.png",
-    descriptionKey: "teacher.farhod_ismoilov_description",
+    subject: "Физика, IT-направления",
+    image: teacher3,
+    courses: 4,
+    students: 120,
   },
   {
     id: 4,
     name: "Зухра Рахимова",
-    subjectKey: "teacher.zuhra_rahimova_subject",
-    image: "/images/teacher-placeholder-4.png",
-    descriptionKey: "teacher.zuhra_rahimova_description",
+    subject: "Английский язык, IELTS",
+    image: teacher4,
+    courses: 2,
+    students: 95,
   },
-]
+];
 
 export const getResourceBySlug = (slug) => {
-  return resources.find((r) => r.href === `/resources/${slug}`) || null
-}
+  return resources.find((r) => r.href === `/resources/${slug}`) || null;
+};
