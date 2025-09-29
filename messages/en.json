@@ -140,5 +140,108 @@
     "search_placeholder": "Search courses...",
     "official": "Official",
     "verified": "Verified"
+  },
+  "home": {
+    "hero_tabs": {
+      "directions": "Directions",
+      "results": "Results",
+      "teachers": "Teachers"
+    },
+    "intellect_description_directions": "Intellect is a center that prepares students for admission to top universities in Uzbekistan and worldwide: IT, medicine, engineering, linguistics.",
+    "intellect_description_results": "Our students get into clusters 4–5 with scores from 170 to 195. 87% are prize-winners of chemistry and biology olympiads.",
+    "intellect_description_teachers": "Classes are taught by PhD candidates, olympiad winners, and certified IELTS/HSK instructors.",
+    "slider": [
+      {
+        "title": "Preparation for Clusters 4–5",
+        "description": "Intensive courses in math, physics, and chemistry — your guaranteed path into IT, medicine, and engineering. Our students average 175+."
+      },
+      {
+        "title": "Medical Disciplines",
+        "description": "Anatomy, histology, physiology, and biochemistry — explained simply. Perfect for medical school admission and first-year studies."
+      },
+      {
+        "title": "Foreign Languages",
+        "description": "English, Chinese, Russian — with native speakers and methodology experts. We prepare for IELTS, HSK, TOEFL. Scores from 6.5 to 8.0."
+      },
+      {
+        "title": "Chemistry & Biology Olympiads",
+        "description": "Win national and international olympiads. Our students are prize-winners of 'Zulfiya', 'Olimp', 'Sharq Talanti'."
+      },
+      {
+        "title": "Individual Programs",
+        "description": "Flexible schedule, personal tutor, diagnostic of weak areas. Tailored preparation for your goals — from 3 to 12 months."
+      }
+    ],
+    "cards": [
+      {
+        "title": "Preparation for Clusters 4–5",
+        "description": "92% of our students enter clusters 4–5 with scores from 170 to 195. Personalized approach from diagnosis to final test."
+      },
+      {
+        "title": "Chemistry & Biology Olympiads",
+        "description": "Our students are prize-winners of national olympiads 'Zulfiya', 'Olimp', 'Sharq Talanti'. We prepare for victories starting from grade 9."
+      }
+    ],
+    "stats_experience": "12+ Years of Experience",
+    "stats_graduates": "2500+ Graduates",
+    "stats_cluster_admission": "87% Admitted to Clusters 4–5",
+    "stats_olympiad_winners": "65+ Olympiad Prize-Winners",
+    "blog_title": "Useful Materials for Applicants",
+    "blog_subtitle": "Read our articles to prepare for admission, olympiads, and exams. Real advice from teachers and alumni.",
+    "reviews_title": "What Our Students Say",
+    "reviews_subtitle": "Real success stories from those who got admitted, won olympiads, or passed IELTS.",
+    "learn_more_arrow": "Learn more →",
+    "learn_more": "Learn more"
+  },
+  "reviews": {
+    "aziza_rahimova": {
+      "name": "Aziza Rahimova",
+      "role": "Student, Grade 11",
+      "text": "Thanks to your biology and chemistry classes, I won 2nd place at the national olympiad! Teachers explain complex topics simply and clearly."
+    },
+    "dilshod_karimov": {
+      "name": "Dilshod Karimov",
+      "role": "Parent",
+      "text": "My son got into medical school on cluster 5 with 187 points! We’re especially grateful for the anatomy and physiology prep — that was the hardest part."
+    },
+    "sofia_van": {
+      "name": "Sofia Van",
+      "role": "Student, IELTS preparation",
+      "text": "I scored 7.5 on IELTS! My teacher didn’t just teach the language but tailored lessons to my weak areas. Highly recommend for studying abroad."
+    },
+    "mirzakhid_abdullaev": {
+      "name": "Mirzakhid Abdullaev",
+      "role": "Student, Cluster 4",
+      "text": "Got into IT with 172 points. Math and physics courses were especially helpful — they explained even the toughest problems."
+    },
+    "nigina_tursunova": {
+      "name": "Nigina Tursunova",
+      "role": "Student, Biochemistry",
+      "text": "The biochemistry course saved me in my first year of med school! Now I understand metabolism, enzymes, and DNA. Thank you for making it accessible!"
+    }
+  },
+  "blog": {
+    "posts": [
+      {
+        "title": "How to Prepare for Cluster 4–5: Step-by-Step Guide",
+        "categoryLabel": "Data Science",
+        "excerpt": "A step-by-step preparation plan: from diagnosis to final test. Real success stories from our students."
+      },
+      {
+        "title": "Olympiad Preparation: Tips from the Jury",
+        "categoryLabel": "Art & Design",
+        "excerpt": "Analysis of typical problems, jury tips, and class schedules. Start preparing now!"
+      },
+      {
+        "title": "From IELTS 5.5 to 7.5: Sofia’s Success Story",
+        "categoryLabel": "Business",
+        "excerpt": "How Sofia improved her score. Program, materials, and study schedule."
+      },
+      {
+        "title": "Essential Topics in Anatomy for Medical Students",
+        "categoryLabel": "Data Science",
+        "excerpt": "Key topics you must know. How to memorize terms without losing your mind. Muscle and bone maps."
+      }
+    ]
   }
 }

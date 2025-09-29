@@ -2,10 +2,10 @@ import hero1 from "@/assets/speaker_01.jpg";
 import hero2 from "@/assets/speaker_02.jpg";
 import hero3 from "@/assets/speaker_03.jpg";
 import hero4 from "@/assets/speaker_04.jpg";
-import teacher1 from '@/assets/david.jpeg';
-import teacher2 from '@/assets/millar.jpeg';
-import teacher3 from '@/assets/watsan.jpeg';
-import teacher4 from '@/assets/jones.jpeg';
+import teacher1 from "@/assets/david.jpeg";
+import teacher2 from "@/assets/millar.jpeg";
+import teacher3 from "@/assets/watsan.jpeg";
+import teacher4 from "@/assets/jones.jpeg";
 
 export const intellectLocations = [
   {
@@ -231,104 +231,65 @@ export const textVariants = {
 
 export const reviews = [
   {
-    name: "Азиза Рахимова",
-    role: "Студентка, 11 класс",
-    rating: 5,
-    text: "Благодаря вашим занятиям по биологии и химии я заняла 2-е место на республиканской олимпиаде! Преподаватели объясняют сложные темы просто и понятно.",
-    avatar: hero2,
     id: 1,
-  },
-  {
-    name: "Дилшод Каримов",
-    role: "Родитель",
-    rating: 5,
-    text: "Сын поступил в медицинский на 5-й кластер с 187 баллами! Особенно благодарны за подготовку по анатомии и физиологии — это было самым сложным.",
-    avatar: hero1,
-    id: 2,
-  },
-  {
-    name: "София Ван",
-    role: "Студентка, готовилась к IELTS",
-    rating: 5,
-    text: "Сдала IELTS на 7.5! Преподаватель не просто учил язык, а адаптировал занятия под мои слабые места. Очень рекомендую для поступления за границу.",
-    avatar: hero4,
-    id: 3,
-  },
-  {
-    name: "Мирзахид Абдуллаев",
-    role: "Студент, 4-й кластер",
-    rating: 4,
-    text: "Поступил на IT-направление с 172 баллами. Особенно помогли курсы по математике и физике — объясняли даже самые сложные задачи.",
-    avatar: hero3,
-    id: 4,
-  },
-  {
-    name: "Нигина Турсунова",
-    role: "Студентка, биохимия",
-    rating: 5,
-    text: "Курс по биохимии спас меня на первом курсе меда! Теперь я понимаю, что такое метаболизм, ферменты и ДНК. Спасибо за доступный подход!",
+    translationKey: "reviews.aziza_rahimova",
     avatar: hero2,
+    rating: 5,
+  },
+  {
+    id: 2,
+    translationKey: "reviews.dilshod_karimov",
+    avatar: hero1,
+    rating: 5,
+  },
+  {
+    id: 3,
+    translationKey: "reviews.sofia_van",
+    avatar: hero4,
+    rating: 4,
+  },
+  {
+    id: 4,
+    translationKey: "reviews.mirzakhid_abdullaev",
+    avatar: hero3,
+    rating: 4,
+  },
+  {
     id: 5,
+    translationKey: "reviews.nigina_tursunova",
+    avatar: hero2,
+    rating: 5,
   },
 ];
 
 export const blogPosts = [
   {
     id: 1,
-    title: "Take Your Career Next Leveley Future Approach",
-    category: "data-science",
-    categoryLabel: "Data Science",
     image: hero1,
     date: "August 10, 2023",
     author: "Admin",
-    excerpt: "Пошаговый план подготовки: от диагностики до финального теста. Реальные кейсы наших студентов.",
+    translationKey: "blog.posts.0", 
   },
   {
     id: 2,
-    title: "Take Your Career Next Leveley Future Approach",
-    category: "art-design",
-    categoryLabel: "Art & Design",
     image: hero1,
     date: "June 21, 2023",
     author: "Admin",
-    excerpt: "Разбор типичных задач, лайфхаки от жюри, расписание занятий. Начните готовиться уже сейчас!",
+    translationKey: "blog.posts.1",
   },
   {
     id: 3,
-    title: "Take Your Career Next Leveley Future Approach",
-    category: "business",
-    categoryLabel: "Business",
     image: hero1,
     date: "June 21, 2023",
     author: "Admin",
-    excerpt: "История Софии: как она подняла балл с 5.5 до 7.5. Программа, материалы, график занятий.",
+    translationKey: "blog.posts.2",
   },
   {
     id: 4,
-    title: "Take Your Career Next Leveley Future Approach",
-    category: "data-science",
-    categoryLabel: "Data Science",
     image: hero1,
     date: "June 21, 2023",
     author: "Admin",
-    excerpt: "Самые важные темы, которые нужно знать. Как учить термины и не сойти с ума. Карта мышц и костей.",
-  },
-];
-
-export const teamMembers = [
-  {
-    id: 1,
-    name: "Олимов Олимчон",
-    titleKey: "about.olimjon_title",
-    image: "/placeholder.svg?height=150&width=150",
-    descriptionKey: "about.olimjon_description",
-  },
-  {
-    id: 2,
-    name: "Шахбози Абдулло | ДОКТОР",
-    titleKey: "about.shahbozi_title",
-    image: "/placeholder.svg?height=150&width=150",
-    descriptionKey: "about.shahbozi_description",
+    translationKey: "blog.posts.3",
   },
 ];
 

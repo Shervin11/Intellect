@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -16,11 +16,25 @@ import logo from "@/assets/Screenshot_3.webp";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { useLocaleSwitcher } from "./hooks/useLocaleSwitcher";
 
 const Header = () => {
   const t = useTranslations();
   const [lang, setLang] = React.useState("");
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { locale, switchLocale, localeLabel } = useLocaleSwitcher();
+
+  const locales = [
+    { code: "en", label: "English" },
+    { code: "ru", label: "Русский" },
+    { code: "tj", label: "Тоҷикӣ" },
+  ];
 
   return (
     <header className="sticky dark:bg-slate-900 top-0 z-50 bg-background/80 backdrop-blur-md border-b">
@@ -59,7 +73,7 @@ const Header = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link href={item.href}>
-                  <li className="relative p-3 hover:bg-gray-100 rounded-lg transition-all duration-300 hover:text-[#0B95CE] hover:cursor-pointer">
+                  <li className="relative p-3 rounded-lg transition-all duration-300 hover:text-[#0B95CE] hover:cursor-pointer bg-transparent hover:bg-gray-100 dark:hover:bg-slate-700/50">
                     {item.label}
                   </li>
                 </Link>
@@ -67,27 +81,50 @@ const Header = () => {
             ))}
           </motion.ul>
 
-          <Select
-            value={lang}
-            onValueChange={(e) => {
-              setLang(e);
-              window.location.href = `/${e.toLowerCase()}`;
-            }}
-          >
-            <SelectTrigger className="w-[120px]">
-              <SelectValue placeholder={t("header.language")} />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="EN">EN</SelectItem>
-              <SelectItem value="RU">RU</SelectItem>
-              <SelectItem value="TJ">TJ</SelectItem>
-            </SelectContent>
-          </Select>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="lg" className="gap-2">
+                <Globe className="h-5 w-5" />
+                <span className="hidden sm:inline">{localeLabel}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {locales.map((loc) => (
+                <DropdownMenuItem
+                  key={loc.code}
+                  onClick={() => switchLocale(loc.code)}
+                  disabled={loc.code === locale}
+                >
+                  {loc.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           <AnimatedThemeToggler />
         </div>
 
         <div className="md:hidden flex items-center gap-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="gap-2">
+                <Globe className="h-4 w-4" />
+                <span className="hidden sm:inline">{localeLabel}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {locales.map((loc) => (
+                <DropdownMenuItem
+                  key={loc.code}
+                  onClick={() => switchLocale(loc.code)}
+                  disabled={loc.code === locale}
+                >
+                  {loc.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <AnimatedThemeToggler />
 
           <Button
@@ -130,7 +167,7 @@ const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-background/95 backdrop-blur-md border-t"
+            className="md:hidden bg-slate-900 border-t"
           >
             <div className="px-4 py-6 space-y-4">
               <motion.ul
@@ -153,37 +190,13 @@ const Header = () => {
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block py-2 px-3 rounded-md hover:bg-accent transition-colors"
+                      className="block py-2 px-3 rounded-md hover:bg-slate-800 transition-colors"
                     >
                       {item.label}
                     </Link>
                   </motion.li>
                 ))}
               </motion.ul>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="pt-4 border-t"
-              >
-                <Select
-                  value={lang}
-                  onValueChange={(e) => {
-                    setLang(e);
-                    window.location.href = `/${e.toLowerCase()}`;
-                  }}
-                >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder={t("header.language")} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="EN">EN</SelectItem>
-                    <SelectItem value="RU">RU</SelectItem>
-                    <SelectItem value="TJ">TJ</SelectItem>
-                  </SelectContent>
-                </Select>
-              </motion.div>
             </div>
           </motion.div>
         )}

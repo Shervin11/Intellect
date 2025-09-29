@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { StarIcon, GraduationCap, Globe, Trophy, Users, Sparkles, Target, Heart } from "lucide-react"
+import { StarIcon, GraduationCap, Globe, Trophy, Users, Target, Heart } from "lucide-react"
 import { teachers } from "@/lib/data"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
