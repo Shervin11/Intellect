@@ -1,49 +1,49 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { useTranslations } from "next-intl"
-import { StarIcon, GraduationCap, Globe, Trophy, Users, Target, Heart } from "lucide-react"
-import { teachers } from "@/lib/data"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import TeacherCard from "@/components/teacherCard"
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
+import { StarIcon, GraduationCap, Globe, Trophy, Users, Target, Heart } from "lucide-react";
+import { teachers } from "@/lib/data";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import TeacherCard from "@/components/teacherCard";
 
 export default function About() {
-  const t = useTranslations()
+  const t = useTranslations();
 
   const stats = [
-    { number: "12+", label: "Лет опыта", icon: GraduationCap },
-    { number: "2500+", label: "Выпускников", icon: Users },
-    { number: "87%", label: "Поступили на 4-5 кластер", icon: StarIcon },
-    { number: "65+", label: "Призёров олимпиад", icon: Trophy },
-  ]
+    { number: t("home.stats_experience"), label: t("home.stats_experience"), icon: GraduationCap },
+    { number: t("home.stats_graduates"), label: t("home.stats_graduates"), icon: Users },
+    { number: t("home.stats_cluster_admission"), label: t("home.stats_cluster_admission"), icon: StarIcon },
+    { number: t("home.stats_olympiad_winners"), label: t("home.stats_olympiad_winners"), icon: Trophy },
+  ];
 
   const values = [
     {
-      title: "Академическое мастерство",
-      description: "Наши преподаватели — кандидаты наук, победители олимпиад и сертифицированные эксперты.",
+      title: t("home.cards.0.title"),
+      description: t("home.cards.0.description"),
       icon: GraduationCap,
       gradient: "from-blue-500 to-cyan-400",
     },
     {
-      title: "Индивидуальный подход",
-      description: "Диагностика слабых мест, гибкий график, личный преподаватель — программа под твои цели.",
+      title: t("home.cards.1.title"),
+      description: t("home.cards.1.description"),
       icon: Heart,
       gradient: "from-pink-500 to-rose-400",
     },
     {
-      title: "Результаты, а не обещания",
-      description: "Средний балл по кластерам — 175+. 87% студентов — призёры олимпиад и конкурсов.",
+      title: t("home.slider.2.title"),
+      description: t("home.slider.2.description"),
       icon: Target,
       gradient: "from-emerald-500 to-teal-400",
     },
     {
-      title: "Глобальные возможности",
-      description: "Готовим к IELTS, HSK, TOEFL. Помогаем поступить в вузы Узбекистана и мира.",
+      title: t("home.slider.3.title"),
+      description: t("home.slider.3.description"),
       icon: Globe,
       gradient: "from-purple-500 to-indigo-400",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950/20">
@@ -67,7 +67,7 @@ export default function About() {
             className="relative inline-block"
           >
             <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent mb-8 leading-tight">
-              О центре Intellect
+              {t("header.about")}
             </h1>
           </motion.div>
           <motion.p
@@ -76,8 +76,7 @@ export default function About() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-5xl mx-auto leading-relaxed font-medium"
           >
-            Мы помогаем студентам поступать в топовые вузы Узбекистана и мира — через качественное образование,
-            индивидуальный подход и реальные результаты.
+            {t("footer.description")}
           </motion.p>
         </motion.section>
 
@@ -93,7 +92,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent"
           >
-            Наши ценности
+            {t("home.hero_tabs.teachers")}
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -144,7 +143,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent"
           >
-            Наши результаты цифрами
+            {t("home.hero_tabs.results")}
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -164,7 +163,7 @@ export default function About() {
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                    {stat.number}
+                    {stat.number.split(" ")[0]}
                   </div>
                   <div className="text-sm font-medium text-slate-600 dark:text-slate-300">{stat.label}</div>
                 </motion.div>
@@ -185,7 +184,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent"
           >
-            Наша команда
+            {t("home.hero_tabs.teachers")}
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             {teachers.map((teacher, index) => (
@@ -217,7 +216,7 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-5xl font-bold mb-6 text-white"
               >
-                Готовы начать обучение?
+                {t("home.learn_more")}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -225,14 +224,14 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
               >
-                Запишитесь на бесплатную диагностику и получите индивидуальный план подготовки.
+                {t("contact.subtitle")}
               </motion.p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
                   className="text-lg px-12 py-6 bg-white text-slate-800 hover:bg-slate-100 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
-                  Записаться на курс →
+                  {t("home.learn_more_arrow")}
                 </Button>
               </motion.div>
             </div>
@@ -240,5 +239,5 @@ export default function About() {
         </motion.section>
       </div>
     </div>
-  )
+  );
 }

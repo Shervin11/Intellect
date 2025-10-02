@@ -4,14 +4,11 @@ import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { createTranslator } from "next-intl"
 
-type Props = {
-  params: {
-    locale: string
-    slug: string
-  }
-}
-
-export default async function ResourceDetailPage({ params }: Props) {
+export default async function ResourceDetailPage({
+  params,
+}: {
+  params: { locale: string; slug: string }
+}) {
   const { slug, locale } = params
 
   let messages
