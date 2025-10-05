@@ -1,13 +1,12 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SearchIcon, CheckCircleIcon, BookOpen, Star, Zap } from "lucide-react";
+import { SearchIcon, CheckCircleIcon, BookOpen, Star } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { resources as rawResources } from "@/lib/data";
@@ -42,11 +41,6 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <motion.div className="absolute top-4 right-4 w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-[2px]">
-          <div className="w-full h-full rounded-2xl bg-background flex items-center justify-center">
-            <BookOpen className="w-5 h-5 text-primary" />
-          </div>
-        </motion.div>
         <div className="relative z-10">
           <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
             {resource.title}

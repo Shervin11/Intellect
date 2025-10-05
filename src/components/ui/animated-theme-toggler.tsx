@@ -1,29 +1,56 @@
 "use client";
 
 import { Moon, SunDim } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
 
-type props = {
+type Props = {
   className?: string;
 };
 
-export const AnimatedThemeToggler = ({ className }: props) => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+export const AnimatedThemeToggler = ({ className }: Props) => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    } else if (savedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
+    } else {
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (systemPrefersDark) {
+        document.documentElement.classList.add("dark");
+        setIsDarkMode(true);
+      } else {
+        document.documentElement.classList.remove("dark");
+        setIsDarkMode(false);
+      }
+    }
+  }, []);
+
   const changeTheme = async () => {
-    if (!buttonRef.current) return;
+    if (!buttonRef.current || isDarkMode === null) return;
+
+    const newTheme = !isDarkMode;
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        const dark = document.documentElement.classList.toggle("dark");
-        setIsDarkMode(dark);
+        if (newTheme) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+        setIsDarkMode(newTheme);
+        localStorage.setItem("theme", newTheme ? "dark" : "light");
       });
     }).ready;
 
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect();
+    const { top, left, width, height } = buttonRef.current.getBoundingClientRect();
     const y = top + height / 2;
     const x = left + width / 2;
 
@@ -42,9 +69,14 @@ export const AnimatedThemeToggler = ({ className }: props) => {
         duration: 700,
         easing: "ease-in-out",
         pseudoElement: "::view-transition-new(root)",
-      },
+      }
     );
   };
+
+  if (isDarkMode === null) {
+    return null;
+  }
+
   return (
     <button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
       {isDarkMode ? <SunDim /> : <Moon />}

@@ -137,7 +137,9 @@
   },
   "catalog": {
     "title": "Курсҳо",
-    "search_placeholder": "Ҷустуҷӯи курсҳо..."
+    "search_placeholder": "Ҷустуҷӯи курсҳо...",
+    "official": "Расми",
+    "verified": "Тасдиқ"
   },
   "home": {
     "hero_tabs": {

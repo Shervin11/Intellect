@@ -137,7 +137,9 @@
   },
   "catalog": {
     "title": "Курсы",
-    "search_placeholder": "Поиск курсов..."
+    "search_placeholder": "Поиск курсов...",
+    "official": "Официальные",
+    "verified": "Проверенные"
   },
   "home": {
     "hero_tabs": {

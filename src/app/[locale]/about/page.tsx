@@ -46,12 +46,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950/20">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">  
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-400/20 to-cyan-600/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      </div>
-
+    <div className="min-h-screen dark:via-slate-900">
       <div className="container mx-auto px-4 py-12 md:py-20 relative">
         <motion.section
           initial={{ opacity: 0, y: 30 }}
@@ -70,14 +65,11 @@ export default function About() {
               {t("header.about")}
             </h1>
           </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+          <p
             className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-5xl mx-auto leading-relaxed font-medium"
           >
             {t("footer.description")}
-          </motion.p>
+          </p>
         </motion.section>
 
         <motion.section
@@ -87,13 +79,6 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-24"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent"
-          >
-            {t("home.hero_tabs.teachers")}
-          </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -177,7 +162,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="m-24"
+          className="max-w-[1300px] my-24 mx-auto"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -186,7 +171,7 @@ export default function About() {
           >
             {t("home.hero_tabs.teachers")}
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
             {teachers.map((teacher, index) => (
               <motion.div
                 key={teacher.id}
@@ -202,10 +187,6 @@ export default function About() {
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 rounded-3xl p-12 md:p-16 shadow-2xl relative overflow-hidden">

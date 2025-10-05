@@ -36,8 +36,7 @@ export default function LocaleLayout({
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
             disableTransitionOnChange
           >
             <Header />

@@ -1,53 +1,34 @@
-"use client";
+"use client"
 
-import React from "react";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import { Globe, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import Link from "next/link";
-import logo from "@/assets/Screenshot_3.webp";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { useLocaleSwitcher } from "./hooks/useLocaleSwitcher";
+import React from "react"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
+import { Globe, Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import logo from "@/assets/Screenshot_3.webp"
+import Image from "next/image"
+import { motion, AnimatePresence } from "framer-motion"
+import { useTranslations } from "next-intl"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
+import { useLocaleSwitcher } from "./hooks/useLocaleSwitcher"
 
 const Header = () => {
-  const t = useTranslations();
-  const [lang, setLang] = React.useState("");
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const { locale, switchLocale, localeLabel } = useLocaleSwitcher();
+  const t = useTranslations()
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const { locale, switchLocale, localeLabel } = useLocaleSwitcher()
 
   const locales = [
     { code: "en", label: "English" },
     { code: "ru", label: "Русский" },
     { code: "tj", label: "Тоҷикӣ" },
-  ];
+  ]
 
   return (
     <header className="sticky dark:bg-slate-900 top-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <nav className="flex items-center py-4 px-4 max-w-[1300px] mx-auto justify-between">
         <Link href="/">
           <div className="flex items-center gap-5 hover:scale-105 transition-all duration-300">
-            <Image
-              src={logo || "/placeholder.svg"}
-              alt="logo"
-              width={50}
-              height={50}
-              className="rounded-full"
-            />
+            <Image src={logo || "/placeholder.svg"} alt="logo" width={50} height={50} className="rounded-full" />
             <p className="bg-gradient-to-r from-[#0B95CE] to-[#6440fb] bg-clip-text text-transparent text-3xl">
               Intellect
             </p>
@@ -62,7 +43,7 @@ const Header = () => {
             transition={{ duration: 0.3, staggerChildren: 0.1 }}
           >
             {[
-              { href: "/courses", label: t("header.courses") },
+              { href: "#courses", label: t("header.courses") },
               { href: "/about", label: t("header.about") },
               { href: "/contacts", label: t("header.contacts") },
             ].map((item, index) => (
@@ -90,11 +71,7 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {locales.map((loc) => (
-                <DropdownMenuItem
-                  key={loc.code}
-                  onClick={() => switchLocale(loc.code)}
-                  disabled={loc.code === locale}
-                >
+                <DropdownMenuItem key={loc.code} onClick={() => switchLocale(loc.code)} disabled={loc.code === locale}>
                   {loc.label}
                 </DropdownMenuItem>
               ))}
@@ -114,11 +91,7 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {locales.map((loc) => (
-                <DropdownMenuItem
-                  key={loc.code}
-                  onClick={() => switchLocale(loc.code)}
-                  disabled={loc.code === locale}
-                >
+                <DropdownMenuItem key={loc.code} onClick={() => switchLocale(loc.code)} disabled={loc.code === locale}>
                   {loc.label}
                 </DropdownMenuItem>
               ))}
@@ -127,12 +100,7 @@ const Header = () => {
 
           <AnimatedThemeToggler />
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden"
-          >
+          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
             <AnimatePresence mode="wait">
               {isMenuOpen ? (
                 <motion.div
@@ -177,7 +145,7 @@ const Header = () => {
                 transition={{ delay: 0.1, staggerChildren: 0.1 }}
               >
                 {[
-                  { href: "/courses", label: t("header.courses") },
+                  { href: "#courses", label: t("header.courses") },
                   { href: "/about", label: t("header.about") },
                   { href: "/contacts", label: t("header.contacts") },
                 ].map((item, index) => (
@@ -202,7 +170,7 @@ const Header = () => {
         )}
       </AnimatePresence>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
