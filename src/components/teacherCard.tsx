@@ -1,12 +1,12 @@
 import { motion } from "motion/react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { Share2Icon, BookOpenIcon, UsersIcon, StarIcon } from "lucide-react"
 
 interface Teacher {
   id: number
   name: string
   subject: string
-  image: string
+  image: string | StaticImageData
   courses?: number
   students?: number
   rating?: number

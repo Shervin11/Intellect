@@ -82,10 +82,13 @@
     "youth": "Youth"
   },
   "about": {
-    "olimjon_title": "CEO",
-    "olimjon_description": "Olimjon is the CEO with 10 years of experience.",
-    "shahbozi_title": "Doctor",
-    "shahbozi_description": "Shahbozi is a medical expert and mentor."
+    "olimjon_name": "Olimjon Olimjonov",
+    "olimjon_title": "Founder and Head of Intellect",
+    "olimjon_description": "At Intellect, we have gathered a team of experienced teachers who will help you understand and master all the course material.\n\nWe dedicate ourselves to every aspiring student and to every dream that has not yet been realized.",
+    "shahbozi_name": "Shahbozi Abdullo",
+    "shahbozi_title": "Co-Founder of Intellect",
+    "shahbozi_description": "Together, we not only keep up with the times and innovations but also define them for Tajikistan and beyond.\n\nAt Intellect, we have gathered a team of experienced teachers who will help you understand and master all the course material.",
+    "description": "The of Intellect is to provide everyone with the opportunity to be a relevant and in-demand specialist right now. Regardless of age and geography."
   },
   "teacher": {
     "ahmad_saidov_subject": "Mathematics",

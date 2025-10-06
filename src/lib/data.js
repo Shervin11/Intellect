@@ -6,6 +6,8 @@ import teacher1 from "@/assets/david.jpeg";
 import teacher2 from "@/assets/millar.jpeg";
 import teacher3 from "@/assets/watsan.jpeg";
 import teacher4 from "@/assets/jones.jpeg";
+import ol from "@/assets/ol.jpg";
+import sh from "@/assets/sh.jpg";
 
 export const intellectLocations = [
   {
@@ -229,6 +231,23 @@ export const textVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+export const teamMembers = [
+  {
+    id: 1,
+    name: "olimjon_name",
+    title: "olimjon_title",
+    description: `olimjon_description`,
+    image: ol
+  },
+  {
+    id: 2,
+    name: "shahbozi_name",
+    title: "shahbozi_title",
+    description: `shahbozi_description`,
+    image: sh
+  },
+];
+
 export const reviews = [
   {
     id: 1,
@@ -268,7 +287,7 @@ export const blogPosts = [
     image: hero1,
     date: "August 10, 2023",
     author: "Admin",
-    translationKey: "blog.posts.0", 
+    translationKey: "blog.posts.0",
   },
   {
     id: 2,

@@ -2,20 +2,45 @@
 
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { StarIcon, GraduationCap, Globe, Trophy, Users, Target, Heart } from "lucide-react";
-import { teachers } from "@/lib/data";
+import {
+  StarIcon,
+  GraduationCap,
+  Globe,
+  Trophy,
+  Users,
+  Target,
+  Heart,
+} from "lucide-react";
+import { teachers, teamMembers } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import TeacherCard from "@/components/teacherCard";
+import TeamCard from "@/components/TeamCard";
 
 export default function About() {
   const t = useTranslations();
 
   const stats = [
-    { number: t("home.stats_experience"), label: t("home.stats_experience"), icon: GraduationCap },
-    { number: t("home.stats_graduates"), label: t("home.stats_graduates"), icon: Users },
-    { number: t("home.stats_cluster_admission"), label: t("home.stats_cluster_admission"), icon: StarIcon },
-    { number: t("home.stats_olympiad_winners"), label: t("home.stats_olympiad_winners"), icon: Trophy },
+    {
+      number: t("home.stats_experience"),
+      label: t("home.stats_experience"),
+      icon: GraduationCap,
+    },
+    {
+      number: t("home.stats_graduates"),
+      label: t("home.stats_graduates"),
+      icon: Users,
+    },
+    {
+      number: t("home.stats_cluster_admission"),
+      label: t("home.stats_cluster_admission"),
+      icon: StarIcon,
+    },
+    {
+      number: t("home.stats_olympiad_winners"),
+      label: t("home.stats_olympiad_winners"),
+      icon: Trophy,
+    },
   ];
 
   const values = [
@@ -56,19 +81,14 @@ export default function About() {
           className="text-center mb-24"
         >
           <motion.div
-            initial={{ scale: 0.9 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
             className="relative inline-block"
           >
             <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent mb-8 leading-tight">
               {t("header.about")}
             </h1>
           </motion.div>
-          <p
-            className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-5xl mx-auto leading-relaxed font-medium"
-          >
-            {t("footer.description")}
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-5xl mx-auto leading-relaxed font-medium">
+            {t("about.description")}
           </p>
         </motion.section>
 
@@ -107,11 +127,43 @@ export default function About() {
                     >
                       <value.icon className="w-8 h-8 text-white" />
                     </motion.div>
-                    <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-slate-100">{value.title}</h3>
-                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{value.description}</p>
+                    <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-slate-100">
+                      {value.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-24"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent"
+          >
+            Our Team
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {teamMembers.map((member, index) => (
+              <TeamCard
+                key={index}
+                nameKey={member.name}
+                titleKey={member.title}
+                descriptionKey={member.description}
+                image={member.image}
+              />
             ))}
           </div>
         </motion.section>
@@ -150,7 +202,9 @@ export default function About() {
                   <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                     {stat.number.split(" ")[0]}
                   </div>
-                  <div className="text-sm font-medium text-slate-600 dark:text-slate-300">{stat.label}</div>
+                  <div className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                    {stat.label}
+                  </div>
                 </motion.div>
               </motion.div>
             ))}
@@ -186,9 +240,7 @@ export default function About() {
           </div>
         </motion.section>
 
-        <motion.section
-          className="text-center"
-        >
+        <motion.section className="text-center">
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 rounded-3xl p-12 md:p-16 shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
             <div className="relative z-10">
@@ -207,7 +259,10 @@ export default function About() {
               >
                 {t("contact.subtitle")}
               </motion.p>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   size="lg"
                   className="text-lg px-12 py-6 bg-white text-slate-800 hover:bg-slate-100 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300"

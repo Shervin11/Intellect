@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { useTranslations } from "next-intl";
 import { reviews, blogPosts } from "@/lib/data";
 import claster from "@/assets/claster.png";
-import medic from "@/assets/medic.jpg";
+import medic from "@/assets/medic.png";
 import languagePhoto from "@/assets/lang.png";
 import bio from "@/assets/bio.png";
 import teacher from "@/assets/teacher.jpg";
