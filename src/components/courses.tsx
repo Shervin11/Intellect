@@ -28,53 +28,51 @@ interface ResourceCardProps {
 
 const ResourceCard: React.FC<ResourceCardProps> = ({ resource, t }) => {
   return (
-    <Link href={resource.href}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="group relative bg-card dark:bg-slate-800 rounded-2xl p-6 border border-border flex flex-col h-full cursor-pointer overflow-hidden shadow-xl transition-all duration-300"
-        whileHover={{
-          y: -8,
-          scale: 1.02,
-          transition: { duration: 0.2 },
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative z-10">
-          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-            {resource.title}
-          </h3>
-          <p className="text-muted-foreground text-sm mb-4 flex-grow leading-relaxed">
-            {resource.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {resource.tags.map((tag, index) => (
-              <Badge
-                key={tag}
-                className="bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-all duration-200"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-          <div className="flex items-center space-x-3 text-sm">
-            {resource.isOfficial && (
-              <span className="flex items-center text-blue-600 dark:text-blue-400 font-medium">
-                <Star className="w-4 h-4 mr-1 fill-current" />{" "}
-                {t("catalog.official")}
-              </span>
-            )}
-            {resource.isVerified && (
-              <span className="flex items-center text-green-600 dark:text-green-400 font-medium">
-                <CheckCircleIcon className="w-4 h-4 mr-1 fill-current" />{" "}
-                {t("catalog.verified")}
-              </span>
-            )}
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="group relative bg-card dark:bg-slate-800 rounded-2xl p-6 border border-border flex flex-col h-full cursor-pointer overflow-hidden shadow-xl transition-all duration-300"
+      whileHover={{
+        y: -8,
+        scale: 1.02,
+        transition: { duration: 0.2 },
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+          {resource.title}
+        </h3>
+        <p className="text-muted-foreground text-sm mb-4 flex-grow leading-relaxed">
+          {resource.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {resource.tags.map((tag, index) => (
+            <Badge
+              key={tag}
+              className="bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-all duration-200"
+            >
+              {tag}
+            </Badge>
+          ))}
         </div>
-      </motion.div>
-    </Link>
+        <div className="flex items-center space-x-3 text-sm">
+          {resource.isOfficial && (
+            <span className="flex items-center text-blue-600 dark:text-blue-400 font-medium">
+              <Star className="w-4 h-4 mr-1 fill-current" />{" "}
+              {t("catalog.official")}
+            </span>
+          )}
+          {resource.isVerified && (
+            <span className="flex items-center text-green-600 dark:text-green-400 font-medium">
+              <CheckCircleIcon className="w-4 h-4 mr-1 fill-current" />{" "}
+              {t("catalog.verified")}
+            </span>
+          )}
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
